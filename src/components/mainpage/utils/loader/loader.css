@@ -1,0 +1,21 @@
+.loader{
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loaderIcon{
+  animation: rotate 1s linear infinite;
+
+}
+
+@keyframes rotate{
+  50%{
+    transform: rotate(80deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

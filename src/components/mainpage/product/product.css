@@ -1,0 +1,43 @@
+.products{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  margin: 20px 0;
+  padding: 0 20px;
+ 
+}
+
+
+@import url('../utils/productItem/productitem.css');
+
+.delete_all{
+  text-align: right;
+  margin: 20px;
+
+}
+.delete_all input{
+  height: 25px;
+  width: 25px;
+  transform: translateY(5px);
+  margin: 0 15px;
+}
+
+.delete_all span{
+  text-transform: uppercase;
+  color: blue;
+  letter-spacing: 1.3px;
+}
+
+.delete_all button{
+  border: 1px solid crimson;
+  padding: .25rem .75rem;
+  color: crimson;
+  border-radius: 1.4rem;
+  text-transform: uppercase;
+}
+
+.no_product{
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 48px;
+}

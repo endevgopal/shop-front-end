@@ -1,0 +1,65 @@
+.detail{
+ 
+  height: auto;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: 150%;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+  
+}
+.related{
+ padding: 0 20px;
+}
+
+.detail img{
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  height: 450px;
+  object-fit: contain;
+  display: block;
+  align-content: flex-start;
+}
+
+.detail .box-detail {
+  max-width: 500px;
+  width: 100%;
+  margin: 10px 20px;
+}
+
+
+.box-detail h2 {
+  text-transform: uppercase;
+  color: #161616;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  
+}
+.box-detail .row h6{
+  margin: 10px 0;
+}
+
+.box-detail p{
+  line-height: 1.5;
+  margin: 10px 0;
+  opacity:  0.8;
+}
+
+.box-detail .cart {
+  background: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: .6rem;
+   border-radius: .6rem;
+  animation: all normal  1s;
+}
+.box-detail .cart:active{
+  transform: scale(1.2);
+}

@@ -1,0 +1,49 @@
+.filter_menu {
+  width: 100%;
+  min-height:40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0 20px;
+
+}
+
+.filter_menu .row select,
+.filter_menu  input {
+  border: 1px solid #480032;
+  outline: none;
+  height: 40px;
+  padding: 0 5px;
+  border-radius:1rem;
+}
+#category {
+  margin-left: 10px;
+}
+
+.filter_menu input{
+  flex: 1;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+@media screen and (max-width: 560px) {
+  .filter_menu .row span{
+    display: none;
+  }
+  .filter_menu input{
+    margin-right: 0;
+  }
+  .filter_menu .sort {
+    flex: 1;
+  }
+  .filter_menu .sort select{
+    width: 100%;
+    min-width: 290px;
+    margin: 5px auto;
+  }
+  #category{
+    margin: 0;
+  }
+}
