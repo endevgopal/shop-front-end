@@ -1,3 +1,7 @@
+.myCart {
+  padding: 10px;
+}
+
 .cart{
   position: relative;
   border: 1px solid black;

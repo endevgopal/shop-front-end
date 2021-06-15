@@ -18,9 +18,14 @@ export const DataProvider = ({ children }) => {
     const firstLogin = localStorage.getItem('userLogin');
     if (firstLogin) {
       const refreshToken = async () => {
-       
-        const res = await axios.get('https://acdc-api21.herokuapp.com/user/refreshToken');
+        const res = await axios.get(
+          'https://acdc-api21.herokuapp.com/user/refreshToken',
+          {
+            headers: { setCookie: localStorage.getItem('refreshToken') },
+          }
+        );
         setToken(res.data.token);
+        
       };
       setTimeout(() => {
         refreshToken();

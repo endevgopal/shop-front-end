@@ -17,13 +17,19 @@ function Register() {
   const register = async (e) => {
     e.preventDefault();
     try {
-      await axios.post( `https://acdc-api21.herokuapp.com/user/register`, { ...user });
+      const res = await axios.post(
+        `https://acdc-api21.herokuapp.com/user/register`,
+        {
+          ...user,
+        }
+      );
+      localStorage.setItem('refreshToken', res.data.refreshToken);
       toast.success('Registration Completed.');
       localStorage.setItem('userLogin', true);
       window.location.href = '/';
     } catch (error) {
-      console.log(error.response.data.msg);
-      toast.error(`${error.response.data.msg}`);
+      console.log(error);
+      toast.error(`${error}`);
     }
   };
 

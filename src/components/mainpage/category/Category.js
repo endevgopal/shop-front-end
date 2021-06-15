@@ -35,9 +35,12 @@ function Category() {
   };
 
   const deleteCategory = async (id) => {
-    const res = await axios.delete(`/api/category/${id}`, {
-      headers: { Authorization: token },
-    });
+    const res = await axios.delete(
+      `https://acdc-api21.herokuapp.com/api/category/${id}`,
+      {
+        headers: { Authorization: token },
+      }
+    );
     toast.success(res.data.msg);
   };
 

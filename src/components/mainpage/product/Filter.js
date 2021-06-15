@@ -15,7 +15,7 @@ function Filter() {
   };
   return (
     <div className="filter_menu">
-      <div className="row">
+      <div className="row ">
         <span>Filters: </span>
         <select name="category" id="category" onChange={handleFilter}>
           <option value="">All product</option>
@@ -34,7 +34,7 @@ function Filter() {
       />
       <div className="row sort">
         <span>Sort By: </span>
-        <select name="sort"  onChange={(e) => setSort(e.target.value)}>
+        <select name="sort" onChange={(e) => setSort(e.target.value)}>
           <option value="">Newest</option>
           <option value="sort=oldest">Oldest</option>
           <option value="sort=-sold">Best sales</option>

@@ -86,7 +86,7 @@ function Cart() {
   };
 
   return (
-    <div>
+    <div className="myCart">
       <div className="total">
         <h3>Total: USD {total}</h3>
         <PayPalButton total={total} tranSuccess={tranSuccess} />

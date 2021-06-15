@@ -85,7 +85,7 @@ function CreateProduct() {
       if (!isAdmin) return toast.error('You are not an Admin');
 
       await axios.post(
-        '/api/destroy',
+        'https://acdc-api21.herokuapp.com/api/destroy',
         { public_id: public_id },
         {
           headers: {

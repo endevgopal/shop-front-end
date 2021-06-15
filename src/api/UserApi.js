@@ -13,9 +13,12 @@ function UserApi(token) {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get( `https://acdc-api21.herokuapp.com/user/info`, {
-            headers: { Authorization: token },
-          });
+          const res = await axios.get(
+            `https://acdc-api21.herokuapp.com/user/info`,
+            {
+              headers: { Authorization: token },
+            }
+          );
           setIsLogged(true);
           res.data.user.role === 1 ? setIsIsAdmin(true) : setIsIsAdmin(false);
         } catch (error) {
@@ -30,12 +33,12 @@ function UserApi(token) {
     if (token) {
       const getHistory = async () => {
         if (isAdmin) {
-          const res = await axios.get( `https://acdc-api21.herokuapp.com/api/payment`, {
+          const res = await axios.get(`http://localhost:5000/api/payment`, {
             headers: { Authorization: token },
           });
           setHistory(res.data);
         } else {
-          const res = await axios.get( `https://acdc-api21.herokuapp.com/user/history`, {
+          const res = await axios.get(`http://localhost:5000/user/history`, {
             headers: { Authorization: token },
           });
           setHistory(res.data);
